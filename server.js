@@ -10,6 +10,9 @@ const sginin = require('./controllers/sginin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+app.use(bodyParser.json());
+app.use(cors());
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
@@ -23,10 +26,6 @@ const db = knex({
 });
 
 const app = express();
-
-app.use(bodyParser.json());
-app.use(cors());
-
 
 app.get('/', (req, res) => { res.json('it is working!') });
 
