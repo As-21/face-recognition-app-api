@@ -1,5 +1,9 @@
 const Clarifai = require('clarifai');
-
+/*
+This is done before i knew about environment variables.
+I know that it still can be accessed after removing the key with commit history and you shouldn't commit code with your private API key.
+Lesson learned and i started implementing API keys with environment variables with future projects.
+*/
 const app = new Clarifai.App({
     apiKey: 'c0c8f75ca388453d8904998e14174b97'
 });
